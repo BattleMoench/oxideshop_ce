@@ -54,7 +54,7 @@ class testOxUtils extends oxUtils
             return call_user_func_array(array(& $this, $sMethod), $aArgs);
         }
 
-        throw new oxSystemComponentException("Function '$sMethod' does not exist or is not accessible! (" . __CLASS__ . ")" . PHP_EOL);
+        throw new \OxidEsales\Eshop\Core\Exception\SystemComponentException("Function '$sMethod' does not exist or is not accessible! (" . __CLASS__ . ")" . PHP_EOL);
     }
 }
 
@@ -70,7 +70,7 @@ class UtilsTest extends \OxidTestCase
      */
     protected function tearDown()
     {
-        oxRegistry::getUtils()->commitFileCache();
+        \OxidEsales\Eshop\Core\Registry::getUtils()->commitFileCache();
 
         clearstatcache();
         //removing test files from tmp dir

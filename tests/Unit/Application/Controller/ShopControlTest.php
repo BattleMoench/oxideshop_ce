@@ -628,7 +628,7 @@ class ShopControlTest extends \OxidTestCase
         $oControl->expects($this->once())->method('_initializeViewObject')->with($sCL, $sFNC, null, null)->will($this->returnValue($oView));
         $oControl->expects($this->once())->method('_handleSystemException')->with($oProtectedMethodException)->will($this->returnValue(true));
 
-        $oControl->start($sCL, $sFNC);
+        $oControl->start('account', $sFNC);
     }
 
     /**

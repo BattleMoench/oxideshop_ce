@@ -36,7 +36,7 @@ class ResultSetTest extends ResultSetBaseTest
     /**
      * Create the database object under test.
      *
-     * @return Doctrine The database object under test.
+     * @return Database The database object under test.
      */
     protected function createDatabase()
     {

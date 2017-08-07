@@ -21,7 +21,6 @@
  */
 namespace OxidEsales\EshopCommunity\Tests\Unit\Core;
 
-use \oxFileException;
 use \Exception;
 use \oxRegistry;
 use \oxTestModules;
