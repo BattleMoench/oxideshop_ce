@@ -84,10 +84,10 @@ class FileTest extends \OxidTestCase
         $this->setExpectedException('oxException');
 
         /** @var \OxidEsales\EshopEnterprise\Core\Utils|PHPUnit_Framework_MockObject_MockObject $utils */
-        $utils = $this->getMock('\OxidEsales\EshopEnterprise\Core\Utils');
+        $utils = $this->getMock('\OxidEsales\Eshop\Core\Utils');
         $utils->expects($this->any())->method('setHeader')->will($this->returnValue(true));
         $utils->expects($this->any())->method('showMessageAndExit')->will($this->returnValue(true));
-        \OxidEsales\Eshop\Core\Registry::set(\OxidEsales\EshopEnterprise\Core\Utils::class, $utils);
+        \OxidEsales\Eshop\Core\Registry::set(\OxidEsales\Eshop\Core\Utils::class, $utils);
 
         $fileName = '../../../config.inc.php';
 
@@ -102,7 +102,7 @@ class FileTest extends \OxidTestCase
         $this->setExpectedException('oxException');
 
         /** @var \OxidEsales\EshopEnterprise\Core\Utils|PHPUnit_Framework_MockObject_MockObject $utils */
-        $utils = $this->getMock('\OxidEsales\EshopEnterprise\Core\Utils');
+        $utils = $this->getMock('\OxidEsales\Eshop\Core\Utils');
         $utils->expects($this->any())->method('setHeader')->will($this->returnValue(true));
         $utils->expects($this->any())->method('showMessageAndExit')->will($this->returnValue(true));
         \OxidEsales\Eshop\Core\Registry::set(\OxidEsales\Eshop\Core\Utils::class, $utils);
